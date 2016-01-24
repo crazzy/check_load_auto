@@ -68,9 +68,9 @@ check_crit() {
 status=`check_warn $load1 $limit_warn1`
 status=`check_warn $load5 $limit_warn5 $status`
 status=`check_warn $load15 $limit_warn15 $status`
-status=`check_warn $load1 $limit_crit1 $status`
-status=`check_warn $load5 $limit_crit5 $status`
-status=`check_warn $load15 $limit_crit15 $status`
+status=`check_crit $load1 $limit_crit1 $status`
+status=`check_crit $load5 $limit_crit5 $status`
+status=`check_crit $load15 $limit_crit15 $status`
 
 if [ $status -eq 0 ]; then
         status_str="OK"
